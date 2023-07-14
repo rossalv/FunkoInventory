@@ -11,6 +11,7 @@ def randomStringDigits(stringLength=6):
 
 @app.route('/')
 def home():
+    pid = 70876
     session = tls_client.Session(
     client_identifier='safari_ios_15_6',
     random_tls_extension_order=True
