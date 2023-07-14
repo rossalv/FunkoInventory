@@ -15,7 +15,7 @@ def home():
     client_identifier='safari_ios_15_6',
     random_tls_extension_order=True
     )
-    return session
+    return str(session)
 
 @app.route('/about')
 def about():
