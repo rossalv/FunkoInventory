@@ -17,7 +17,7 @@ def home():
     random_tls_extension_order=True
         )
     lo = 0
-    hi = 20000
+    hi = 50000
     lastmid = -1
     data = {}
     while True:
