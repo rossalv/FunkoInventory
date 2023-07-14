@@ -9,10 +9,11 @@ def randomStringDigits(stringLength=6):
     lettersAndDigits = string.ascii_letters + string.digits
     return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
 
-@app.route('/', methods=['GET')
+@app.route('/')
 def home():
-    pid = request.args.get('pid')
-    return pid
+    #pid = request.args.get('pid')
+    #return pid
+    pid = '70876'
     session = tls_client.Session(
     client_identifier='safari_ios_15_6',
     random_tls_extension_order=True
@@ -33,7 +34,6 @@ def home():
         lastmid = mid
         if availability == 'This item is currently not available':
             stock = '0'
-            #print(f'Stock: {stock}')
             break
         elif availability == '*** Item(s) in Stock':
             hi = mid
