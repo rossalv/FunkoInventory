@@ -8,7 +8,8 @@ def randomStringDigits(stringLength=6):
 
 @app.route('/')
 def home():
-    return randomStringDigits(12)
+    return "Hello"
+    #return randomStringDigits(12)
 
 @app.route('/about')
 def about():
