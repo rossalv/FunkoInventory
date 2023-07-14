@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template, request
 import random
 import string
 import tls_client
@@ -11,9 +11,7 @@ def randomStringDigits(stringLength=6):
 
 @app.route('/')
 def home():
-    #pid = request.args.get('pid')
-    #return pid
-    pid = '70876'
+    pid = request.args.get('pid')
     session = tls_client.Session(
     client_identifier='safari_ios_15_6',
     random_tls_extension_order=True
