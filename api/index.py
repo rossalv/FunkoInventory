@@ -9,7 +9,7 @@ def randomStringDigits(stringLength=6):
     lettersAndDigits = string.ascii_letters + string.digits
     return ''.join(random.choice(lettersAndDigits) for i in range(stringLength))
 
-@app.route('/')
+@app.route('/', methods=['GET')
 def home():
     pid = request.args.get('pid')
     return pid
