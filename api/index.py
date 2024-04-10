@@ -11,6 +11,10 @@ def randomStringDigits(stringLength=6):
 
 @app.route('/')
 def home():
+    return 'Stock Checker'
+    
+@app.route('/stock')
+def stock():
     pid = request.args.get('pid')
     session = tls_client.Session(
     client_identifier='safari_ios_15_6',
