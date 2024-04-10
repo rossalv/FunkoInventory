@@ -32,7 +32,6 @@ def stock():
             break
         cache = randomStringDigits(12)
         page = session.get('https://funko.com/on/demandware.store/Sites-FunkoUS-Site/en_US/Product-ShowQuickView?pid=' + str(pid) + '&quantity=' + str(mid) + '&cache=' + cache)
-        return str(page.content)
         data = page.json()
         availability = data['product']['availability']['messages'][0]
         lastmid = mid
