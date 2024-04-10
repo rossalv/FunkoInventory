@@ -11,6 +11,11 @@ def randomStringDigits(stringLength=6):
     
 @app.route('/')
 def home():
+    return 'Stock Checker'
+
+
+@app.route('/stock')
+def stock():
     pid = request.args.get('pid')
     session = tls_client.Session(
     client_identifier='safari_ios_15_6',
@@ -42,6 +47,7 @@ def home():
     price = str(data['product']['price']['sales']['formatted'])
     produrl = 'https://funko.com/ralvin/' + str(pid) + '.html'
     return f'{name} - {stock}'
+
 
 @app.route('/about')
 def about():
